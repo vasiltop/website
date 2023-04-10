@@ -12,7 +12,7 @@
         <figure><img src="/src/routes/projects/website.jfif" alt="pic" /></figure>
         <div class="card-body">
             <h2 class="card-title underline"> <a href="https://github.com/vasiltop/personal_website" target="_blank" rel="noopener noreferrer"> Personal Website </a></h2>
-            <p>A website built using SvelteKit.</p>
+            <p>A website built using Svelte.</p>
         </div>
     </div>
 
