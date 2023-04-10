@@ -4,7 +4,7 @@
         <figure><img src="/src/routes/projects/pathfinding.PNG" alt="pic" /></figure>
         <div class="card-body">
             <h2 class="card-title underline"> <a href="https://github.com/vasiltop/pathfinding_visualizer" target="_blank" rel="noopener noreferrer"> A-Star Pathfinding</a></h2>
-            <p>Solves any maze with the most efficient path using python and the A-Star algorithm.</p>
+            <p>Solves any maze with the most efficient path using Python and the A-Star algorithm.</p>
         </div>
     </div>
 
