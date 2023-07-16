@@ -1,0 +1,32 @@
+main {
+    padding: 5%;
+    display: flex;
+    color: var(--main-color);
+    align-items: center;
+    flex-grow: 1;
+    gap: 3%;
+    
+}
+
+
+
+.main-section > h3 {
+    font-size: 2em;
+}
+
+.main-section > h1 {
+    font-size: 4em;
+}
+
+#about-section {
+    flex-basis: 66%;
+}
+
+.border-left-gradient{
+    
+    border-style: solid;
+    padding-left: 15px;
+    border-image: linear-gradient(#a08664, #4d9f0c) 30;
+    border-width: 0px 0px 0px 1px;
+    
+}
