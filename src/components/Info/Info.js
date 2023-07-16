@@ -5,7 +5,7 @@ function Info() {
         <main>
             <div id="about-section" className="main-section">
 
-                <h1>Welcome.</h1>
+                <h1>Welcome!</h1>
                 <div className="border-left-gradient"> 
 
                     <p>I am a first year student at the University of Ottawa that has always been interested in technology. I started programming in the 9th grade with game development and moved onto Java and Python where I developed a deep passion for coding.</p>
