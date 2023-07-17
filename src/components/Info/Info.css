@@ -5,8 +5,10 @@ main {
     align-items: center;
     flex-grow: 1;
     gap: 3%;
-    
+    flex-wrap: wrap;
 }
+
+
 
 
 
