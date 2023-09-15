@@ -6,11 +6,10 @@ import { Helmet } from 'react-helmet';
 function App() {
   return (
     <body>
-
-      <Helmet> 
+      <Helmet>
         <title>Vasil Topalovic</title>
       </Helmet>
-      
+
       <Navbar />
       <Info />
     </body>
