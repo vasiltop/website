@@ -19,7 +19,7 @@ function Info() {
 						Arduino.
 					</p>
 					<p>
-						Feel free to contact me at
+						Feel free to contact me at{' '}
 						<a href="mailto:contact@vasiltopalovic.com">
 							contact@vasiltopalovic.com
 						</a>
