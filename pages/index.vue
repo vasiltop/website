@@ -11,26 +11,33 @@ type Project = {
 
 const projects: Project[] = [
 	{
-		name: 'Ember',
+		name: 'Compiler',
 		description:
-			'Ember is a simple interpreted programming language that follows the fundamental syntax of many popular languages. ',
-		github: 'https://github.com/vasiltop/ember',
-		image: 'ember.png',
+			'A statically typed programming language designed to be efficient and easy to use. Provides extremely efficient compile times and matches the performance of all modern compilers with an LLVM backend.',
+		github: 'https://github.com/vasiltop/compiler',
+		image: 'compiler.png',
 	},
 	{
-		name: 'Straif',
+		name: 'Online Multipler Video Game',
 		description: 'Straif is a fast-paced time trial game inspired by the movement mechanics of the Source Engine games like Counter-Strike: Source.',
 		github: 'https://github.com/vasiltop/straif',
 		website: 'https://munost.itch.io/straif',
 		image: 'straif.png',
 	},
 	{
-		name: 'Miye',
+		name: '3D Renderer',
 		description:
 			"Miye is a simple, lightweight .obj model renderer.",
 		github: 'https://github.com/vasiltop/miye',
 		website: 'https://crates.io/crates/miye',
 		image: 'miye.png',
+	},
+	{
+		name: 'Interpreter',
+		description:
+			'Ember is a simple interpreted programming language that follows the fundamental syntax of many popular languages. ',
+		github: 'https://github.com/vasiltop/ember',
+		image: 'ember.png',
 	},
 	{
 		name: 'Moonqwake',
@@ -41,7 +48,7 @@ const projects: Project[] = [
 		image: 'moonqwake.png',
 	},
 	{
-		name: 'A Slice of Pi',
+		name: 'Metrics Site',
 		description:
 			'A Slice of Pi is a web application created for the OutStem Coding Challenge, where users can view metrics about a fictional pizza store.',
 		github: 'https://github.com/vasiltop/metrics',
@@ -49,7 +56,14 @@ const projects: Project[] = [
 		image: 'metrics.png',
 	},
 	{
-		name: 'Raywolf',
+		name: 'Text Editor',
+		description:
+			'A lightweight, cross-platform, terminal based text editor.',
+		github: 'https://github.com/vasiltop/shark',
+		image: 'shark.png',
+	},
+	{
+		name: 'Raycasting Engine',
 		description:
 			'An implementation of a raycasting engine that displays any array of cells into a 3d environment using the SDL2 library to draw pixels on the screen.',
 		github: 'https://github.com/vasiltop/raycasting-engine',
@@ -94,18 +108,12 @@ const ready = ref(false);
 		<div
 			class="basis-4/5 flex flex-col justify-center px-24 max-w-5xl my-5 overflow-y-hidden"
 		>
-			<h1 class="lg:text-6xl md:text-5xl text-3xl">Welcome!</h1>
+			<h1 class="lg:text-6xl md:text-5xl text-3xl text-center my-8">Welcome!</h1>
 			<p
-				class="border-gradient lg:leading-8 md:leading-6 leading-5 min-w-[10em] text-xl"
+				class="border-gradient lg:leading-8 md:leading-6 leading-5 min-w-[10em] text-xl text-center"
 			>
-				I am a third year student at the University of Ottawa that has always
-				been interested in technology. I started programming in the 9th grade
-				with game development and moved onto Java and Python where I developed a
-				deep passion for coding. After continuing to learn for many years I
-				participated in events such as the Waterloo Computing Contest, and the
-				Engineering Idol, where I built a water filter for indigenous
-				communities using Arduino. Feel free to contact me at
-				contact@vasiltopalovic.com.
+				I’m a third-year Computer Science student at the University of Ottawa passionate about backend development and low-level software engineering. 
+				I love building efficient, scalable systems and diving deep into how things work under the hood. Check out my projects below!
 			</p>
 		</div>
 
