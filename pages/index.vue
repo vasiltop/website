@@ -13,7 +13,7 @@ const projects: Project[] = [
 	{
 		name: 'Compiler',
 		description:
-			'A statically typed programming language designed to be efficient and easy to use. Provides extremely efficient compile times and matches the performance of all modern compilers with an LLVM backend.',
+			'A statically typed programming language designed to be efficient and easy to use. Provides extremely fast compile times and matches the performance of all modern compilers with an LLVM backend.',
 		github: 'https://github.com/vasiltop/compiler',
 		image: 'compiler.png',
 	},
