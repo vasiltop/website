@@ -174,7 +174,7 @@ const ready = ref(false);
 		</div>
 
 		<div
-			v-if="project.name !== 'Ember'"
+			v-if="project.name !== 'Interpreter'"
 			class="w-4/6 h-4/6 flex flex-col rounded-lg overflow-hidden background-card"
 			:style="'background-image: url(' + project.image + ')'"
 		>
