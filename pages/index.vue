@@ -18,7 +18,7 @@ const projects: Project[] = [
 		image: 'compiler.png',
 	},
 	{
-		name: 'Online Multipler Video Game',
+		name: 'Online Multiplayer Video Game',
 		description: 'Straif is a fast-paced time trial game inspired by the movement mechanics of the Source Engine games like Counter-Strike: Source.',
 		github: 'https://github.com/vasiltop/straif',
 		website: 'https://munost.itch.io/straif',
