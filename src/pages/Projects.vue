@@ -18,7 +18,7 @@
 			"github": "raywolf",
 		},
 		{
-			"name": "text-editor",
+			"name": "text editor",
 			"github": "shark",
 		}
 	];
