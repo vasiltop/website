@@ -6,11 +6,6 @@
 			"tenure": "starting september 2025",
 		},
 		{
-			"company": "general dynamics mission systems",
-			"title": "software engineer",
-			"tenure": "january 2025 - april 2025",
-		},
-		{
 			"company": "canada border services agency",
 			"title": "data engineer",
 			"tenure": "may 2024 - december 2024",
