@@ -10,7 +10,7 @@ import { icon_data } from "@/icons.js";
 		<a href="#/experience"> experience </a>
 		<a href="#/projects"> projects </a>
 		<a href="#/games"> video games </a>
-		<a href="/resume.pdf" target="_blank"> resume </a>
+		<!-- <a href="/resume.pdf" target="_blank"> resume </a> -->
 		<a href="mailto:vasiltopalovic@outlook.com"> contact me </a>
 
 		<div id="icon-row" >
