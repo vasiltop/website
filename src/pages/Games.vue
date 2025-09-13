@@ -1,16 +1,12 @@
 <script setup>
 	const projects = [
 		{
-			"name": "straif two",
-			"url": "https://store.steampowered.com/app/3850480/Straif/",
+			"name": "straif",
+			"url": "https://munost.itch.io/straif",
 		},
 		{
 			"name": "pace",
 			"url": "https://munost.itch.io/pace",
-		},
-		{
-			"name": "straif",
-			"url": "https://munost.itch.io/straif",
 		},
 		{
 			"name": "winter vendetta",
