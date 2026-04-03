@@ -1,42 +1,63 @@
 <script setup>
-	import { ref, computed } from 'vue';
+	import { ref, computed, onMounted } from 'vue';
 	import Home from './pages/Home.vue';
 	import Projects from './pages/Projects.vue';
 	import Experience from './pages/Experience.vue';
-	import Games from './pages/Games.vue';
+	import Resume from './pages/Resume.vue';
+	import ProjectReadme from './pages/ProjectReadme.vue';
+	import { ensureReadmesLoaded } from '@/lib/readmeCache.js';
 
-	const routes = {
-		'/': Home,
-		'/projects': Projects,
-		'/experience': Experience,
-		'/games': Games,
-	};
+	function normalizeHash(hash) {
+		let p = (hash.startsWith('#') ? hash.slice(1) : hash) || '/';
+		if (p.length > 1 && p.endsWith('/')) p = p.replace(/\/+$/, '');
+		return p || '/';
+	}
 
-	const current_path = ref(window.location.hash);
-	
+	const current_path = ref(normalizeHash(window.location.hash));
+
 	window.addEventListener('hashchange', () => {
-		current_path.value = window.location.hash;
+		current_path.value = normalizeHash(window.location.hash);
 	});
 
-	const current_view = computed(() => {
-		return routes[current_path.value.slice(1) || '/'];
+	onMounted(() => {
+		ensureReadmesLoaded();
 	});
-	
+
+	const route = computed(() => {
+		const p = current_path.value;
+		if (p === '/' || p === '') return { view: 'home' };
+		if (p === '/projects') return { view: 'projects' };
+		if (p.startsWith('/projects/')) {
+			const slug = p.slice('/projects/'.length);
+			if (slug) return { view: 'project', slug: decodeURIComponent(slug) };
+		}
+		if (p === '/experience') return { view: 'experience' };
+		if (p === '/resume') return { view: 'resume' };
+		return { view: 'home' };
+	});
 </script>
 
 <template>
-	<component :is="current_view" />
+	<Home v-if="route.view === 'home'" />
+	<Projects v-else-if="route.view === 'projects'" />
+	<ProjectReadme v-else-if="route.view === 'project'" :slug="route.slug" />
+	<Experience v-else-if="route.view === 'experience'" />
+	<Resume v-else-if="route.view === 'resume'" />
+	<Home v-else />
 </template>
 
 <style>
-	#app {
-		width: 100vw;
-		height: 100vh;
+	html,
+	body {
+		margin: 0;
+		min-height: 100%;
 		background-color: #dbd4ca;
 	}
 
-	body {
-		margin: 0px;
+	#app {
+		width: 100%;
+		min-height: 100vh;
+		background-color: #dbd4ca;
 	}
 
 	.hero {
@@ -44,9 +65,10 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		height: 100%;
+		min-height: 100vh;
 		flex-direction: column;
 		gap: 4px;
+		box-sizing: border-box;
 	}
 
 	:root {

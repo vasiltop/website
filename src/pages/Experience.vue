@@ -3,7 +3,7 @@
 		{
 			"company": "ciena",
 			"title": "software engineer",
-			"tenure": "starting september 2025",
+			"tenure": "september 2025 - present",
 		},
 		{
 			"company": "canada border services agency",
