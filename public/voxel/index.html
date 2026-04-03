@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>voxel</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #1a1a1a; }
+    canvas { display: block; width: 100%; height: 100%; }
+  </style>
+  <link rel="modulepreload" href="/voxel/voxel-9bd10dc935243f14.js" crossorigin="anonymous">
+  <link rel="preload" href="/voxel/voxel-9bd10dc935243f14_bg.wasm" crossorigin="anonymous" as="fetch" type="application/wasm">
+</head>
+<body>
+<script type="module">
+import init, * as bindings from '/voxel/voxel-9bd10dc935243f14.js';
+const wasm = await init({ module_or_path: '/voxel/voxel-9bd10dc935243f14_bg.wasm' });
+window.wasmBindings = bindings;
+</script>
+</body>
+</html>

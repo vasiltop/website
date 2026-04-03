@@ -25,7 +25,7 @@
 </script>
 
 <template>
-	<div class="page">
+	<div class="page" :class="{ 'page--voxel': slug === 'voxel' }">
 		<header class="top">
 			<h1 class="title">{{ entry?.title ?? pin?.title ?? pin?.repo ?? slug }}</h1>
 			<div class="row">
@@ -43,7 +43,22 @@
 			<a href="#/projects">return to projects</a>
 		</div>
 
-		<article v-else-if="body?.kind === 'html'" class="readme" v-html="body.html"></article>
+		<template v-else-if="body?.kind === 'html'">
+			<section v-if="slug === 'voxel'" class="demo" aria-label="Voxel web demo">
+				<p class="demo-lead">
+					<a href="/voxel/index.html" target="_blank" rel="noopener noreferrer">Open in a full tab</a>
+				</p>
+				<div class="demo-frame">
+					<iframe
+						title="voxel WASM demo"
+						src="/voxel/index.html"
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+					/>
+				</div>
+			</section>
+			<article class="readme" v-html="body.html"></article>
+		</template>
 
 		<p v-else class="message">loading…</p>
 	</div>
@@ -56,6 +71,51 @@
 		padding: 32px 24px 48px;
 		max-width: 44rem;
 		margin: 0 auto;
+	}
+
+	.page--voxel {
+		max-width: min(52rem, 100%);
+	}
+
+	.demo {
+		margin-bottom: 2rem;
+	}
+
+	.demo-title {
+		font-size: 1.35em;
+		font-weight: 400;
+		margin: 0 0 0.35em;
+		text-align: center;
+	}
+
+	.demo-lead {
+		font-size: 16px;
+		line-height: 1.45;
+		margin: 0 0 1rem;
+		text-align: center;
+		color: var(--text-color);
+	}
+
+	.demo-lead .underline {
+		text-decoration: underline;
+	}
+
+	.demo-frame {
+		position: relative;
+		width: 100%;
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0 6px 28px rgba(56, 52, 51, 0.18);
+		background: #1a1a1a;
+		aspect-ratio: 16 / 10;
+		min-height: 360px;
+	}
+
+	.demo-frame iframe {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 0;
 	}
 
 	.top {

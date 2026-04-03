@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync-voxel": "node scripts/sync-voxel-demo.mjs"
   },
   "dependencies": {
     "dompurify": "^3.3.3",
