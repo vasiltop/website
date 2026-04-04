@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/sync-voxel-demo.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "sync-voxel": "node scripts/sync-voxel-demo.mjs"

@@ -22,7 +22,10 @@ function die(msg) {
 }
 
 if (!existsSync(voxelDist)) {
-	die(`Missing voxel build output: ${voxelDist}\nBuild with: cd ../voxel && trunk build --release`)
+	console.warn(
+		`Skipping voxel sync (not found: ${voxelDist}). Using committed public/voxel. To refresh: cd ../voxel && trunk build --release && pnpm run sync-voxel`,
+	)
+	process.exit(0)
 }
 
 const names = readdirSync(voxelDist)
