@@ -15,11 +15,10 @@ export const defaultBranch = 'main';
 export const pinnedRepos = [
 	{ repo: 'straif', title: 'online multiplayer video game' },
 	{ repo: 'jolt', title: 'compiler' },
+	{ repo: 'spider', title: 'search engine' },
+	{ repo: 'raytracer', title: 'raytracer' },
 	{ repo: 'editor', title: 'text editor' },
-	{ repo: 'voxel', title: 'voxel engine' },
 	{ repo: 'chip-8', title: 'chip-8 emulator' },
-	{ repo: 'miye', title: 'renderer' },
-	{ repo: 'raywolf', title: 'raycaster' },
 ];
 
 export function slugForPin(pin) {
