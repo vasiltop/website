@@ -13,12 +13,12 @@ export const defaultBranch = 'main';
  * @property {string} [slug] — URL hash segment `#/projects/<slug>` (defaults to repo)
  */
 export const pinnedRepos = [
+	{ repo: 'mark', title: 'markdown language' },
+	{ repo: 'latch', title: 'digital circuit simulator' },
 	{ repo: 'straif', title: 'online multiplayer video game' },
 	{ repo: 'jolt', title: 'compiler' },
 	{ repo: 'spider', title: 'search engine' },
 	{ repo: 'raytracer', title: 'raytracer' },
-	{ repo: 'editor', title: 'text editor' },
-	{ repo: 'chip-8', title: 'chip-8 emulator' },
 ];
 
 export function slugForPin(pin) {
